@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    { "source": "/clock", "destination": "/projects/clock" },
+    { "source": "/clock/(.*)", "destination": "/projects/clock/$1" },
+
+    { "source": "/music", "destination": "/projects/music" },
+    { "source": "/music/(.*)", "destination": "/projects/music/$1" },
+
+    { "source": "/unfinished", "destination": "/projects/unfinished" },
+    { "source": "/unfinished/(.*)", "destination": "/projects/unfinished/$1" }
+  ]
+}
