@@ -1,0 +1,8 @@
+{
+  "name": "labs",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build-all.mjs",
+    "dev": "node scripts/dev-help.mjs"
+  }
+}
