@@ -1,6 +1,0 @@
-{
-  "rewrites": [
-    { "source": "/clock/:path*", "destination": "/clock/index.html" },
-    { "source": "/music/:path*", "destination": "/music/index.html" }
-  ]
-}
