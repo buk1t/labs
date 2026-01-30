@@ -10,5 +10,11 @@
     "title": "music",
     "description": "messing with audio + ui ideas",
     "status": "experimental"
-  }
+  },
+  {
+  "slug": "unfinished",
+  "title": "this site is unfinished",
+  "description": "come to my completely normal site with nothing weird at all",
+  "status": "nochaos"
+}
 ]
