@@ -14,23 +14,20 @@ function run(cmd, cwd) {
 rmSync(dist, { recursive: true, force: true });
 mkdirSync(dist, { recursive: true });
 
-// Copy directory homepage to dist root
-if (!existsSync(siteDir)) throw new Error("Missing /site folder");
+// 1) Copy directory homepage to dist root
+if (!existsSync(siteDir)) {
+  throw new Error("Missing /site folder");
+}
 cpSync(siteDir, dist, { recursive: true });
 
-// Add your app folder names here
-const apps = ["clock", "music"];
+// 2) Build each app and copy to dist/<appname>
+const apps = ["clock", "music"]; // <-- add new ones here
 
 for (const app of apps) {
   const appPath = path.join(appsDir, app);
 
-  const lock = path.join(appPath, "package-lock.json");
-  const installCmd = existsSync(lock)
-    ? "npm ci"
-    : "npm install --no-fund --no-audit";
-
-  run(installCmd, appPath);
-  run("npm run build", appPath);
+  run("npm install --no-fund --no-audit", appPath);
+  run("npm run build", appPath);  // Vite build
 
   const appDist = path.join(appPath, "dist");
   const target = path.join(dist, app);
