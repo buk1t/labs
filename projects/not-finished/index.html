@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>unfinished</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="wrap" id="wrap">
+      <header class="top">
+        <div class="badge">labs</div>
+        <h1 id="title">THIS SITE IS UNFINISHED</h1>
+        <p class="sub" id="subtitle">
+          it is actively becoming something. loudly.
+        </p>
+      </header>
+
+      <section class="panel">
+        <div class="row">
+          <div>
+            <div class="label">Current status</div>
+            <div id="status" class="status">loading excuses…</div>
+          </div>
+
+          <div class="controls" id="migrateControls">
+            <button id="ship" class="btn">Ship it</button>
+            <button id="addChaos" class="btn ghost">Add chaos</button>
+            <button id="tinyStop" class="btn tiny" title="Freeze (Esc)">
+              ✶
+            </button>
+          </div>
+        </div>
+
+        <div class="meter">
+          <div class="label">Progress</div>
+          <div class="bar">
+            <div id="barFill" class="fill"></div>
+          </div>
+          <div id="progressText" class="progressText">0%</div>
+        </div>
+      </section>
+
+      <section class="panel" id="todoPanel">
+        <div class="row">
+          <div>
+            <div class="label">TODO (unreliable)</div>
+            <div class="hint">click to “complete” things. it will react.</div>
+          </div>
+
+          <button id="shuffle" class="btn ghost">Shuffle</button>
+        </div>
+
+        <ul id="todo" class="todo"></ul>
+      </section>
+
+      <section class="panel console" id="consolePanel">
+        <div class="row">
+          <div>
+            <div class="label">console (theatrical)</div>
+            <div class="hint">not real. but it thinks it is.</div>
+          </div>
+
+          <button id="clearConsole" class="btn ghost">Clear</button>
+        </div>
+
+        <div id="console" class="consoleBox" aria-live="polite"></div>
+      </section>
+
+      <footer class="foot">
+        <span>© buk1t labs</span>
+        <span id="timestamp"></span>
+      </footer>
+    </main>
+
+    <!-- toasts live outside content so they can float -->
+    <div
+      id="toastHost"
+      class="toastHost"
+      aria-live="polite"
+      aria-atomic="true"
+    ></div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
