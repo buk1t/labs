@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Soundscapes</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div class="brand">
+          <div class="dot" aria-hidden="true"></div>
+          <div class="titlewrap">
+            <h1 class="title">Soundscapes</h1>
+            <p class="subtitle">get turnt with my unoriginal idea</p>
+          </div>
+        </div>
+
+        <div class="topbar-actions">
+          <button class="pill" id="btn-save" type="button">Save mix</button>
+          <button
+            class="iconbtn"
+            id="btn-theme"
+            type="button"
+            aria-label="Toggle theme"
+          >
+            <span class="icon" aria-hidden="true">◐</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="grid knobs">
+        <section class="card booth" aria-label="Booth">
+          <div class="card-head">
+            <h2>DJ Booth</h2>
+            <div class="hint">spin to adjust each sound</div>
+          </div>
+
+          <div class="knob-grid">
+            <!-- KNOB -->
+            <div class="knobcard" data-sound="rain">
+              <div
+                class="knob"
+                role="slider"
+                aria-label="Rain"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="0"
+                tabindex="0"
+                style="--val: 0; --deg: -135deg"
+              >
+                <div class="knob-face">
+                  <div class="knob-notch"></div>
+                </div>
+              </div>
+              <div class="knobmeta">
+                <div class="knobname">Rain</div>
+                <div class="knobvalue">0%</div>
+              </div>
+            </div>
+
+            <div class="knobcard" data-sound="wind">
+              <div
+                class="knob"
+                role="slider"
+                aria-label="Wind"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="0"
+                tabindex="0"
+                style="--val: 0; --deg: -135deg"
+              >
+                <div class="knob-face"><div class="knob-notch"></div></div>
+              </div>
+              <div class="knobmeta">
+                <div class="knobname">Wind</div>
+                <div class="knobvalue">0%</div>
+              </div>
+            </div>
+
+            <div class="knobcard" data-sound="traffic">
+              <div
+                class="knob"
+                role="slider"
+                aria-label="Distant traffic"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="0"
+                tabindex="0"
+                style="--val: 0; --deg: -135deg"
+              >
+                <div class="knob-face"><div class="knob-notch"></div></div>
+              </div>
+              <div class="knobmeta">
+                <div class="knobname">Traffic</div>
+                <div class="knobvalue">0%</div>
+              </div>
+            </div>
+
+            <div class="knobcard" data-sound="room">
+              <div
+                class="knob"
+                role="slider"
+                aria-label="Room tone"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="0"
+                tabindex="0"
+                style="--val: 0; --deg: -135deg"
+              >
+                <div class="knob-face"><div class="knob-notch"></div></div>
+              </div>
+              <div class="knobmeta">
+                <div class="knobname">Room</div>
+                <div class="knobvalue">0%</div>
+              </div>
+            </div>
+
+            <div class="knobcard" data-sound="hum">
+              <div
+                class="knob"
+                role="slider"
+                aria-label="Low hum"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="0"
+                tabindex="0"
+                style="--val: 0; --deg: -135deg"
+              >
+                <div class="knob-face"><div class="knob-notch"></div></div>
+                <div class="knob-ring"></div>
+              </div>
+              <div class="knobmeta">
+                <div class="knobname">Hum</div>
+                <div class="knobvalue">0%</div>
+              </div>
+            </div>
+
+            <div class="knobcard" data-sound="noise">
+              <div
+                class="knob"
+                role="slider"
+                aria-label="Brown noise"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="0"
+                tabindex="0"
+                style="--val: 0; --deg: -135deg"
+              >
+                <div class="knob-face"><div class="knob-notch"></div></div>
+              </div>
+              <div class="knobmeta">
+                <div class="knobname">Noise</div>
+                <div class="knobvalue">0%</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="masterstrip">
+            <div class="masterlabel">
+              <div class="mastertitle">Master Settings</div>
+              <div class="mastersub">turn it on or off</div>
+            </div>
+
+            <div class="mastercontrols">
+              <button class="pill subtle" id="btn-fadein" type="button">
+                Fade in
+              </button>
+              <button class="pill subtle" id="btn-fadeout" type="button">
+                Fade out
+              </button>
+
+              <div class="masterknobwrap">
+                <div
+                  class="knob master"
+                  role="slider"
+                  aria-label="Master volume"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  aria-valuenow="80"
+                  tabindex="0"
+                  style="--val: 80; --deg: 81deg"
+                >
+                  <div class="knob-face"><div class="knob-notch"></div></div>
+                </div>
+                <div class="masterpct">80%</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="card library" aria-label="Saved mixes">
+          <div class="card-head">
+            <h2>Saved Mixes</h2>
+            <div class="hint">for your favorite sounds</div>
+          </div>
+
+          <div class="saved-list">
+            <button class="saved" type="button">
+              <div class="saved-title">Last night</div>
+              <div class="saved-meta">Jan 31 • 6 sounds</div>
+            </button>
+
+            <button class="saved" type="button">
+              <div class="saved-title">Rainy morning</div>
+              <div class="saved-meta">Jan 29 • 3 sounds</div>
+            </button>
+
+            <button class="saved" type="button">
+              <div class="saved-title">Library hush</div>
+              <div class="saved-meta">Jan 22 • 2 sounds</div>
+            </button>
+          </div>
+
+          <!--  <div class="library-footer"> (this was supposed to work but it doesnt... later work i presume)
+            <button class="pill subtle wide" type="button">Export</button>
+            <button class="pill subtle wide" type="button">Import</button>
+          </div> -->
+        </aside>
+      </main>
+
+      <footer class="footer">
+        <div class="kbd">
+          <a href="https://labs.buk1t.com" class="kbd">© buk1t labs</a>
+          <button class="smallbtn ghost" id="btn-credits" type="button">
+            Credits
+          </button>
+        </div>
+
+        <div class="status">
+          <span class="pulse" aria-hidden="true"></span>
+          <span id="status-text">quiet and ready</span>
+        </div>
+      </footer>
+    </div>
+    <!-- Action modal (rename / save name / delete confirm) -->
+    <div class="modal" id="action-modal" aria-hidden="true">
+      <div class="modal-backdrop" data-close="1"></div>
+
+      <div
+        class="modal-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="action-title"
+      >
+        <div class="modal-head">
+          <div class="modal-title" id="action-title">Title</div>
+          <button
+            class="iconbtn"
+            id="action-close"
+            type="button"
+            aria-label="Close"
+          >
+            <span class="icon" aria-hidden="true">✕</span>
+          </button>
+        </div>
+
+        <div class="modal-body" id="action-body">
+          <!-- injected content -->
+        </div>
+
+        <div class="modal-actions" id="action-actions">
+          <!-- injected actions -->
+        </div>
+      </div>
+    </div>
+    <!-- Credits modal -->
+    <div class="modal" id="credits-modal" aria-hidden="true">
+      <div class="modal-backdrop" data-close></div>
+
+      <div
+        class="modal-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Credits"
+      >
+        <div class="modal-head">
+          <div>
+            <div class="modal-title">Credits</div>
+            <div class="modal-sub">Sound sources & licenses</div>
+          </div>
+          <button
+            class="iconbtn"
+            id="btn-credits-close"
+            type="button"
+            aria-label="Close credits"
+          >
+            <span class="icon" aria-hidden="true">✕</span>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <div class="credits">
+            <p>
+              <a
+                href="https://freesound.org/people/craigsmith/sounds/486272/"
+                target="_blank"
+                rel="noopener"
+              >
+                R30-25a-Steady Heavy Rain.wav
+              </a>
+              by
+              <a
+                href="https://freesound.org/people/craigsmith/"
+                target="_blank"
+                rel="noopener"
+                >craigsmith</a
+              >
+              — License:
+              <a
+                href="http://creativecommons.org/publicdomain/zero/1.0/"
+                target="_blank"
+                rel="noopener"
+                >CC0</a
+              >
+            </p>
+
+            <p>
+              <a
+                href="https://freesound.org/people/klankbeeld/sounds/701346/"
+                target="_blank"
+                rel="noopener"
+              >
+                wind spring 12.44 PM 23031
+              </a>
+              by
+              <a
+                href="https://freesound.org/people/klankbeeld/"
+                target="_blank"
+                rel="noopener"
+                >klankbeeld</a
+              >
+              — License:
+              <a
+                href="https://creativecommons.org/licenses/by/4.0/"
+                target="_blank"
+                rel="noopener"
+                >CC BY 4.0</a
+              >
+            </p>
+
+            <p>
+              <a
+                href="https://freesound.org/people/mhtaylor67/sounds/235530/"
+                target="_blank"
+                rel="noopener"
+              >
+                Freeway Traffic Moving at the Speed Limit (side of the road)
+              </a>
+              by
+              <a
+                href="https://freesound.org/people/mhtaylor67/"
+                target="_blank"
+                rel="noopener"
+                >mhtaylor67</a
+              >
+              — License:
+              <a
+                href="http://creativecommons.org/publicdomain/zero/1.0/"
+                target="_blank"
+                rel="noopener"
+                >CC0</a
+              >
+            </p>
+
+            <p>
+              <a
+                href="https://freesound.org/people/Tim_Verberne/sounds/546581/"
+                target="_blank"
+                rel="noopener"
+              >
+                F_ST_Room_Tone_09.wav
+              </a>
+              by
+              <a
+                href="https://freesound.org/people/Tim_Verberne/"
+                target="_blank"
+                rel="noopener"
+                >Tim_Verberne</a
+              >
+              — License:
+              <a
+                href="http://creativecommons.org/publicdomain/zero/1.0/"
+                target="_blank"
+                rel="noopener"
+                >CC0</a
+              >
+            </p>
+
+            <p>
+              <a
+                href="https://freesound.org/people/elle-trudgett/sounds/131143/"
+                target="_blank"
+                rel="noopener"
+              >
+                ComputerHum.mp3
+              </a>
+              by
+              <a
+                href="https://freesound.org/people/elle-trudgett/"
+                target="_blank"
+                rel="noopener"
+                >elle-trudgett</a
+              >
+              — License:
+              <a
+                href="http://creativecommons.org/publicdomain/zero/1.0/"
+                target="_blank"
+                rel="noopener"
+                >CC0</a
+              >
+            </p>
+
+            <p>
+              <a
+                href="https://freesound.org/people/DiArchangeli/sounds/116395/"
+                target="_blank"
+                rel="noopener"
+              >
+                TV Static.wav
+              </a>
+              by
+              <a
+                href="https://freesound.org/people/DiArchangeli/"
+                target="_blank"
+                rel="noopener"
+                >DiArchangeli</a
+              >
+              — License:
+              <a
+                href="http://creativecommons.org/publicdomain/zero/1.0/"
+                target="_blank"
+                rel="noopener"
+                >CC0</a
+              >
+            </p>
+          </div>
+
+          <p class="credits-note">
+            Tip: use CC0 sounds when possible. One sound uses CC BY 4.0 and is
+            credited above.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="js/audio.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/ui.js"></script>
+  </body>
+</html>

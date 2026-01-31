@@ -13,7 +13,6 @@ const shipBtn = document.getElementById("ship");
 const addChaosBtn = document.getElementById("addChaos");
 const shuffleBtn = document.getElementById("shuffle");
 const clearConsoleBtn = document.getElementById("clearConsole");
-const tinyStopBtn = document.getElementById("tinyStop");
 
 const consoleBox = document.getElementById("console");
 const todoPanel = document.getElementById("todoPanel");
@@ -520,9 +519,9 @@ function toggleFreeze() {
   stopped ? unfreeze() : freeze();
 }
 
-// keyboard escape hatch: Esc toggles freeze
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") toggleFreeze();
+// keyboard escape hatch: Space Bar toggles freeze
+document.addEventListener("keydown", (e) => { 
+    if (e.key === " ") toggleFreeze(); 
 });
 
 // ---- events ----
@@ -569,7 +568,6 @@ clearConsoleBtn.addEventListener("click", () => {
   if (Math.random() < 0.35) toast({ title: "Notice", message: "Logs cleared. Reality preserved.", ttl: 2600 });
 });
 
-tinyStopBtn.addEventListener("click", toggleFreeze);
 
 // ---- init ----
 function bootTimers() {

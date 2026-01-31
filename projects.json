@@ -1,15 +1,9 @@
 [
   {
-    "slug": "clock",
-    "title": "clock test",
-    "description": "testing time, intervals, and display logic",
-    "status": "wip"
-  },
-  {
-    "slug": "music",
-    "title": "music",
-    "description": "messing with audio + ui ideas",
-    "status": "experimental"
+    "slug": "soundscapes",
+    "title": "soundscapes",
+    "description": "background music for studying",
+    "status": "in development"
   },
   {
   "slug": "unfinished",
